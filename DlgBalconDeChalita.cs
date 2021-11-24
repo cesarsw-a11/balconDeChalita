@@ -650,7 +650,7 @@ namespace El_Balcon_de_Chalita
             }
             catch (MySqlException ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -674,7 +674,7 @@ namespace El_Balcon_de_Chalita
             }
             catch (MySqlException ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
         private void btnEliminarObjeto_Click(object sender, EventArgs e)
@@ -697,7 +697,7 @@ namespace El_Balcon_de_Chalita
             }
             catch (MySqlException ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
         private void limpiarCamposFormInventario()
@@ -827,6 +827,45 @@ namespace El_Balcon_de_Chalita
             {
                 MessageBox.Show("Debe seleccionar un cliente para la busqueda de su inventario");
             }
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TpgReservaciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DlgBalconDeChalita_Load(object sender, System.EventArgs e)
+        {
+
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtSubTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void CbxClientesInventarioClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

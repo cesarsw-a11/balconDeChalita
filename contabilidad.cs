@@ -67,7 +67,6 @@ namespace El_Balcon_de_Chalita
             }
 
         }
-
         private void egresos()
         {
             MySqlDataReader reader = null;
@@ -85,7 +84,6 @@ namespace El_Balcon_de_Chalita
                 int contador = 0;
                 float gastosLimpieza = 0;
                 float gastosCompañiaAfiliada = 0;
-                string x = "";
 
                 //Si la consulta trae resultados, se llenara el combobox de clientes
                 if (reader.HasRows)
@@ -125,6 +123,26 @@ namespace El_Balcon_de_Chalita
         {
             float ganaciasTotales = totalIngresos - totalEgresos;
             txtGanancias.Text = "$"+ganaciasTotales.ToString();
+        }
+
+        private void contabilidad_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ingresos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DgbIngresos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 
