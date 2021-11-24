@@ -85,7 +85,6 @@ namespace El_Balcon_de_Chalita
                 int contador = 0;
                 float gastosLimpieza = 0;
                 float gastosCompañiaAfiliada = 0;
-                string algo = "";
 
                 //Si la consulta trae resultados, se llenara el combobox de clientes
                 if (reader.HasRows)
