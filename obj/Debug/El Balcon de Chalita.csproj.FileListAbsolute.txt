@@ -48,3 +48,29 @@ C:\Users\ASUS VIVOBOOK X512JA\Downloads\Sistema-de-Reservacion-master\Sistema-de
 C:\Users\ASUS VIVOBOOK X512JA\Downloads\Sistema-de-Reservacion-master\Sistema-de-Reservacion-master\obj\Debug\El Balcon de Chalita.csproj.CopyComplete
 C:\Users\ASUS VIVOBOOK X512JA\Downloads\Sistema-de-Reservacion-master\Sistema-de-Reservacion-master\obj\Debug\El Balcon de Chalita.exe
 C:\Users\ASUS VIVOBOOK X512JA\Downloads\Sistema-de-Reservacion-master\Sistema-de-Reservacion-master\obj\Debug\El Balcon de Chalita.pdb
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El Balcon de Chalita.csproj.AssemblyReference.cache
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El Balcon de Chalita.exe.config
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El_Balcon_de_Chalita.contabilidad.resources
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El_Balcon_de_Chalita.DlgBalconDeChalita.resources
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El_Balcon_de_Chalita.Login.resources
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El_Balcon_de_Chalita.Properties.Resources.resources
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El Balcon de Chalita.csproj.GenerateResource.cache
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El Balcon de Chalita.csproj.CoreCompileInputs.cache
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El Balcon de Chalita.exe
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El Balcon de Chalita.pdb
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\El Balcon de Chalita.exe.config
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\El Balcon de Chalita.exe
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\El Balcon de Chalita.pdb
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\MySql.Data.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\Google.Protobuf.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\ZstdNet.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\System.Memory.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\System.Buffers.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Adrián\Desktop\balconDeChalita\bin\Debug\MySql.Data.xml
+C:\Users\Adrián\Desktop\balconDeChalita\obj\Debug\El Balcon de Chalita.csproj.CopyComplete
