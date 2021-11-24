@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cliente.cs" />
     <Compile Include="contabilidad.cs">
       <SubType>Form</SubType>
     </Compile>

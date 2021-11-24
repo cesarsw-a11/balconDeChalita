@@ -8,5 +8,9 @@ namespace El_Balcon_de_Chalita
 {
     class cliente
     {
+        public void limpiarCamposFormularioClientes()
+        {
+
+        }
     }
 }
