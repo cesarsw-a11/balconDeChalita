@@ -4,6 +4,8 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Net;
 using System.Net.Mail;
+using System.Collections.Generic;
+
 using System.Text.RegularExpressions;
 
 namespace El_Balcon_de_Chalita
@@ -36,60 +38,40 @@ namespace El_Balcon_de_Chalita
         {
             //Se inicializa el componente
             InitializeComponent();
-            //Generamos el codigo del cliente
+            //Generamos el codigo en automatico del cliente
             generarCodigoCliente();
+            //Llenamos los combobox de los clientes y compañias afiliadas
+            llenarComboBoxClientes();
+            llenarComboBoxCompañiasAfiliadas();
             
-            //Instanciamos la clase de Mysql para la lectura de registros en BD
-            MySqlDataReader reader = null;
+        }
 
-            //Query para obtener toda la info de los clientes registrados en la BD
-            string query = "SELECT* FROM clientes";
-            string queryCompañias = "SELECT * FROM compañiasafiliadas";
-            //Instanciamos la clase de MysqlConnection 
-            MySqlConnection conexionBD = mysql.conexion.Conexion();
-            //Abrimos la conexion a la BD
-            conexionBD.Open();
-            //Ejecutamos bloque try - catch para ejecutar el query de consulta
-            try
+        private void llenarComboBoxClientes()
+        {
+            cliente cliente = new cliente();
+            List<string> clientes = cliente.llenarComboBoxClientes();
+
+
+            for (int i = 0; i < clientes.Count; i++)
             {
-                MySqlCommand comando = new MySqlCommand(query, conexionBD);
-                reader = comando.ExecuteReader();
-                MySqlCommand comando2 = new MySqlCommand(queryCompañias, conexionBD);
-                //Si la consulta trae resultados, se llenara el combobox de clientes
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        CbxClientes.Items.Add(reader.GetString(6) + "-" + reader.GetString(1));
-                        CbxClientesInventarioClientes.Items.Add(reader.GetString(6) + "-" + reader.GetString(1));
-
-                    }
-                    //cbxClientes.SelectedIndex = 0;
-                }
-                reader.Close();
-                reader = comando2.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        cbxCompañias.Items.Add(reader.GetString(0) + "-" + reader.GetString(1));
-
-                    }
-                    //cbxClientes.SelectedIndex = 0;
-                }
-
+                CbxClientes.Items.Add(clientes[i]);
+                CbxClientesInventarioClientes.Items.Add(clientes[i]);
             }
-            catch (MySqlException ex)
+            
+        }
+
+        private void llenarComboBoxCompañiasAfiliadas()
+        {
+            cliente compañias = new cliente();
+            List<string> listaCompañias = compañias.llenarComboBoxCompañiasAfiliadas();
+
+
+            for (int i = 0; i < listaCompañias.Count; i++)
             {
-                MessageBox.Show("Ocurrio un error en la consulta:" + ex.Message);
-            }
-            finally
-            {
-                conexionBD.Close();
+                cbxCompañias.Items.Add(listaCompañias[i]);
             }
 
         }
-
         private void generarCodigoCliente()
         {
             //Creamos el objeto para crear el codigo a partir de la clase generadorRandom()
@@ -138,25 +120,11 @@ namespace El_Balcon_de_Chalita
         private void TsbEliminar_Click(object sender, System.EventArgs e)
         {
 
-            String codigo = TbxCodigo.Text;
+            string codigo = TbxCodigo.Text;
+            cliente cliente = new cliente();
 
-            String query = "DELETE FROM clientes where codigoCliente= '" + codigo + "' ";
-            MessageBox.Show(query);
-
-            MySqlConnection conexionBD = mysql.conexion.Conexion();
-            conexionBD.Open();
-            try
-            {
-                MySqlCommand accion = new MySqlCommand(query, conexionBD);
-                accion.ExecuteNonQuery();
-                MessageBox.Show("Registro eliminado");
-                limpiarCampos();
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Error al eliminar el regustro:" + ex.Message);
-            }
-
+            cliente.eliminarCliente(codigo);
+            limpiarCampos();
         }
 
         //---------------------------------------------------------------------
@@ -356,11 +324,15 @@ namespace El_Balcon_de_Chalita
 
                     }
                 }
+                else
+                {
+                    MessageBox.Show("No existe cliente con el codigo: " + TbxCodigo.Text);
+                }
 
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("No se han encotrado registros:" + ex.Message);
+                MessageBox.Show("Error al realizar la consulta:" + ex.Message);
             }
 
 

@@ -13,8 +13,8 @@ namespace El_Balcon_de_Chalita
 {
     public partial class contabilidad : Form
     {
-        public float totalIngresos = 0;
-        public float totalEgresos = 0;
+        private float totalIngresos = 0;
+        private float totalEgresos = 0;
         public contabilidad()
         {
             InitializeComponent();
