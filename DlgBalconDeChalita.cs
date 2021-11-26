@@ -36,16 +36,11 @@ namespace El_Balcon_de_Chalita
         {
             //Se inicializa el componente
             InitializeComponent();
-            generadorRandom random = new generadorRandom();
-            int claveRandom = random.generarNumeroRandom();
+            //Generamos el codigo del cliente
+            generarCodigoCliente();
+            
             //Instanciamos la clase de Mysql para la lectura de registros en BD
             MySqlDataReader reader = null;
-
-            string contraseaEncriptada = Encrypt.GetSHA256("karmen");
-            //MessageBox.Show(contraseaEncriptada);
-
-            //Seteamos el codigo random en el input del codigo del cliente
-            TbxCodigo.Text = claveRandom.ToString();
 
             //Query para obtener toda la info de los clientes registrados en la BD
             string query = "SELECT* FROM clientes";
@@ -93,6 +88,19 @@ namespace El_Balcon_de_Chalita
                 conexionBD.Close();
             }
 
+        }
+
+        private void generarCodigoCliente()
+        {
+            //Creamos el objeto para crear el codigo a partir de la clase generadorRandom()
+            generadorRandom random = new generadorRandom();
+            int claveRandom = random.generarNumeroRandom();
+
+            string contraseaEncriptada = Encrypt.GetSHA256("karmen");
+            //MessageBox.Show(contraseaEncriptada);
+
+            //Seteamos el codigo random en el input del codigo del cliente
+            TbxCodigo.Text = claveRandom.ToString();
         }
 
         //---------------------------------------------------------------------
