@@ -61,6 +61,7 @@
       <DependentUpon>contabilidad.cs</DependentUpon>
     </Compile>
     <Compile Include="correo.cs" />
+    <Compile Include="crud.cs" />
     <Compile Include="DlgBalconDeChalita.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -49,7 +49,8 @@ namespace El_Balcon_de_Chalita
         private void llenarComboBoxClientes()
         {
             cliente cliente = new cliente();
-            List<string> clientes = cliente.llenarComboBoxClientes();
+            cliente.asignarTablaConsulta("clientes");
+            List<string> clientes = cliente.leer();
 
 
             for (int i = 0; i < clientes.Count; i++)
@@ -63,7 +64,8 @@ namespace El_Balcon_de_Chalita
         private void llenarComboBoxCompañiasAfiliadas()
         {
             cliente compañias = new cliente();
-            List<string> listaCompañias = compañias.llenarComboBoxCompañiasAfiliadas();
+            compañias.asignarTablaConsulta("compañiasafiliadas");
+            List<string> listaCompañias = compañias.leer();
 
 
             for (int i = 0; i < listaCompañias.Count; i++)
@@ -122,8 +124,9 @@ namespace El_Balcon_de_Chalita
 
             string codigo = TbxCodigo.Text;
             cliente cliente = new cliente();
+            cliente.asignarQueryEliminar("DELETE FROM clientes where codigoCliente= '" + codigo + "' ");
 
-            cliente.eliminarCliente(codigo);
+            cliente.eliminar();
             limpiarCampos();
         }
 
