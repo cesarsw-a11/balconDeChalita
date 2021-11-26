@@ -6,12 +6,12 @@ namespace El_Balcon_de_Chalita
     {
         public void asignarTablaConsulta(string tabla)
         {
-            this.tablaConsulta = tabla;
+            tablaConsulta = tabla;
         }
 
         public void asignarQueryEliminar(string query)
         {
-            this.queryEliminar = query;
+            queryEliminar = query;
         }
        
     }
